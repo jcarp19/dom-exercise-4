@@ -1,0 +1,165 @@
+body, html, div, p, h1, h2, h3, h4, h5, h6 {
+    padding: 0;
+    margin: 0
+}
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1em;
+    font-weight: normal;
+}
+h2 {
+    margin-bottom: 1em;
+}
+
+#wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding-top: 2em;
+}
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 75%;
+    padding-bottom: 2em;
+    border-bottom: 1px solid #e2e2e2;
+    margin-bottom: 4em;
+}
+.buttonTask {
+    text-align: center;
+}
+button {
+    min-width: 200px;
+    margin: 1em;
+    padding: 1em 1.5em;
+    background-color: #2081bf;
+    color:#ffffff;
+    font-weight: bold;
+    border-radius: 50px;
+    border: 2px solid #2081bf;
+    transition: all .5s ease-out;
+}
+button:hover {
+    background-color: #ffffff;
+    color: #2081bf;
+}
+
+#formCoins {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+} 
+
+input, select {
+    width: 300px;
+    height: 2em;
+}
+label {
+    margin-top: 1em;
+    margin-bottom: .5em;
+}
+#money {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    max-width: 600px;
+}
+.coin {
+    width: 100px;
+    height: 100px;
+    background-color: #e4e4e4;
+    color: #222222;
+    border: 3px solid #222222;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* #clickMe {
+    width: 100%;
+    height: 100px;
+    background-color: #0F8B8D;
+    color: #143642;
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+p {
+    padding: 2em;
+}
+.bye {
+    border: 1px solid #143642
+}
+
+.container {
+    width: 400px;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border:  #143642 10px solid;
+    margin-top: 2em;
+}
+.animate{
+    border:  #0f8b8d 10px solid;
+}
+.container h1{
+    font-weight: 900;
+    font-size: 60px;
+} */
+
+
+
+/* added 6-30 */
+#container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#newCoins {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 75%;
+}
+
+.penny {
+    border-color: #755332;
+    background-color: #b87333;
+    color: #755332;
+}
+
+.nickle {
+    border-color: #727472;
+    background-color: #B6BFB6;
+    color: #727472;
+}
+.dime {
+    border-color: #708899;
+    background-color: #D3DDE4;
+    color: #708899;
+}
+.quarter {
+    border-color: #8F8A77;
+    background-color: #EFEBDD;
+    color: #8F8A77;
+}
+
+
+
+
+@media only screen and (max-width: 600px) {
+    section {
+        flex-direction: column;
+        width: 90%;
+    }
+}

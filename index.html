@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>6-30</title>
+</head>
+<body>
+    <!-- MY INITIAL ATTEMP - DOM LAB 2 -->
+    <!-- <div id="wrapper">
+        <section>
+            <h2>DOM EXERCISE 2</h2>
+            <form id="formCoins">
+                <label for="">How many? (1-10)</label>
+                <input id="count" type="range" min="1" max="10" step="1" value="2" placeholder="How many coins">
+                <input id="count" type="number" min="1" max="10" placeholder="How many coins (1-10)">
+                <label for="type">Which coin?</label>
+                <select name="type" id="type">
+                    <option value="" disabled selected>Select your option</option>
+                    <option value="penny">Penny</option>
+                    <option value="nickle">Nickle</option>
+                    <option value="dime">Dime</option>
+                    <option value="quarter">Quarter</option>
+                </select>
+                <button type="button" onclick="submitCoinForm()">Make Money</button>
+                <div id="money"></div>
+            </form>
+        </section> 
+    </div> -->
+
+    <!-- IN CLASS WALK THROUGH -->
+    <div id="container">
+        <form id="formCoins">
+            <label for="">How many? (1-10)</label>
+            
+            <input name="howMany" id="count" type="number" min="1" max="10" placeholder="How many coins (1-10)" required>
+            <label for="type2">Which coin?</label>
+            <select name="type2" id="type2">
+                <option disabled selected>Select your option</option>
+                <option value="penny">Penny</option>
+                <option value="nickle">Nickle</option>
+                <option value="dime">Dime</option>
+                <option value="quarter">Quarter</option>
+            </select>
+            <button type="submit"  id="addCoins" type="button">Make Money</button>
+        </form>
+        <div id="newCoins">
+            <!-- <div class="coin">
+                <p>Penny</p>
+            </div> -->
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
