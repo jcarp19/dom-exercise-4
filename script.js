@@ -39,35 +39,50 @@
 //     document.querySelector("#newCoin").innerHTML += penny;
 // })
 
+
+let total = 0;
+
 // right waY is to use the eventlistener on the submit of the form
 const doThis = (event) => {
     
     event.preventDefault();
 
-    
     // console logged the input from the user
     const data = new FormData(document.querySelector("form"));
-    const numberOfCoins = data.get("howMany"); // USE NAME OF FORM
+
+    const numberOfCoins = Number(data.get("howMany")); 
     console.log(numberOfCoins);
     
-    const typeOfCoin = data.get("type2");
-    console.log(typeOfCoin);
+    const valueOfCoin = Number(data.get("typeOfCoin"));
+    console.log(valueOfCoin);
+
+    const nameOfCoin = typeOfCoin.selectedOptions[0].innerText;
+    console.log(nameOfCoin);
+  
     
     for (let i = 1; i <= numberOfCoins; i++) {
         
-        let someCoin = `<div class="coin ${typeOfCoin}"><p>${typeOfCoin}</p></div>`;
-            document.querySelector("#newCoins").innerHTML += someCoin;
-        newCoins.addEventListener("click", removeCoin)
-    
+        let someCoin = `<div class="coin ${nameOfCoin}" value="${valueOfCoin}"><p>${nameOfCoin}</p></div>`;
+        document.querySelector("#newCoins").innerHTML += someCoin;
+        
     };
+
+    total += (valueOfCoin * numberOfCoins) / 100;
+    console.log(total.toFixed(2));
+    document.querySelector(".totalMade").innerText = total.toFixed(2);
 };
+
 document.querySelector("form").addEventListener("submit", doThis)
 
 
-const removeCoin = (e) => {
-    e.target.remove();
-}
+document.querySelector("#newCoins").addEventListener("click", (e) => {
+    if (e.target.classList.contains("coin")) {
+        // console.log(this);
+        e.target.remove();
 
-// // add html
-// let penny = `<div class="coin"><p>Penny</p></div>`;
-// document.querySelector("#newCoin").innerHTML += penny;
+        total -= Number(e.target.attributes.value.value) / 100;
+        console.log(total.toFixed(2))
+        document.querySelector(".totalMade").innerText = total.toFixed(2);
+    }
+});
+

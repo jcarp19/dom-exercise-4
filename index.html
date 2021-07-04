@@ -32,17 +32,18 @@
 
     <!-- IN CLASS WALK THROUGH -->
     <div id="container">
+        <h1>You Made $<span class="totalMade">0</span></h1>
         <form id="formCoins">
             <label for="">How many? (1-10)</label>
-            
             <input name="howMany" id="count" type="number" min="1" max="10" placeholder="How many coins (1-10)" required>
-            <label for="type2">Which coin?</label>
-            <select name="type2" id="type2">
+
+            <label for="typeOfCoin">Which coin?</label>
+            <select name="typeOfCoin" id="typeOfCoin">
                 <option disabled selected>Select your option</option>
-                <option value="penny">Penny</option>
-                <option value="nickle">Nickle</option>
-                <option value="dime">Dime</option>
-                <option value="quarter">Quarter</option>
+                <option value="1">penny</option>
+                <option value="5">nickle</option>
+                <option value="10">dime</option>
+                <option value="25">quarter</option>
             </select>
             <button type="submit"  id="addCoins" type="button">Make Money</button>
         </form>

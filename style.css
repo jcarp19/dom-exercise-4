@@ -72,14 +72,14 @@ label {
 .coin {
     width: 100px;
     height: 100px;
-    background-color: #e4e4e4;
-    color: #222222;
-    border: 3px solid #222222;
+    margin: .25em;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+    
+
 /* #clickMe {
     width: 100%;
     height: 100px;
@@ -133,23 +133,23 @@ p {
 }
 
 .penny {
-    border-color: #755332;
+    border: 3px solid #755332;
     background-color: #b87333;
     color: #755332;
 }
 
 .nickle {
-    border-color: #727472;
+    border: 3px solid #727472;
     background-color: #B6BFB6;
     color: #727472;
 }
 .dime {
-    border-color: #708899;
+    border: 3px solid #708899;
     background-color: #D3DDE4;
     color: #708899;
 }
 .quarter {
-    border-color: #8F8A77;
+    border: 3px solid #8F8A77;
     background-color: #EFEBDD;
     color: #8F8A77;
 }
